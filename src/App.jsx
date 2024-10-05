@@ -2,6 +2,9 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import Papa from "papaparse";
 import codes from "../public/countryCode";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AboutUs from "./pages/about";
+
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -199,6 +202,7 @@ function App() {
   return (
     <>
       <MainNav />
+
       <div id="dashboard">
         <h1>Explore the yearly emissions of CO2 in your country</h1>
 

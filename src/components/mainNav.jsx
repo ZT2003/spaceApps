@@ -1,6 +1,8 @@
 import dashboard from "../assets/dashboard.svg";
 import team from "../assets/team.svg";
 import references from "../assets/references.svg";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AboutUs from "../pages/about";
 function MainNav() {
   return (
     <>
