@@ -36,7 +36,7 @@
   display: none;
 }
 #links-list li {
-  padding: 0px 10px;
+  padding: 0px;
 }
 @keyframes logo-spin {
   from {
@@ -62,5 +62,5 @@
 }
 li img,
 li span {
-  padding: 0;
+  padding: 0 10px;
 }
