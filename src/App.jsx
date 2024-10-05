@@ -200,27 +200,26 @@ function App() {
     <>
       <MainNav />
       <div id="dashboard">
-        <h3>
-          Dataset name: Pilot top-down CO2 Budget constrained by the v10 OCO-2
-          MIP Version 1.0
-        </h3>
+        <h1>Explore the yearly emissions of CO2 in your country</h1>
 
-        <select
-          className="select-country"
-          name="country"
-          id="country"
-          value={country}
-          onChange={(event) => setCountry(event.target.value)}
-        >
-          <option value="ALL">ALL</option>
-          {codes.map((obj, index) => {
-            return (
-              <option value={obj.code} key={index}>
-                {obj.country}
-              </option>
-            );
-          })}
-        </select>
+        <div className="selector-div">
+          <select
+            className="select-country"
+            name="country"
+            id="country"
+            value={country}
+            onChange={(event) => setCountry(event.target.value)}
+          >
+            <option value="ALL">ALL</option>
+            {codes.map((obj, index) => {
+              return (
+                <option value={obj.code} key={index}>
+                  {obj.country}
+                </option>
+              );
+            })}
+          </select>
+        </div>
         <br />
         <select
           className="raw-data"
@@ -281,17 +280,20 @@ function App() {
             </table>
           )}
         </div>
-        <div className="raw-data">
+        <div>
           {country === "ALL" ? (
-            <h2>Please select a country to display charts</h2>
+            <h3 className="message">
+              Please select a country to display charts
+            </h3>
           ) : (
             <div>
               <Bar options={barOptions} data={barData} />
-              <Line options={LineOptions} data={Linedata} />
+              {/* <!-- <Line options={LineOptions} data={Linedata} /> --> */}
             </div>
           )}
         </div>
         <div id="info">
+          <h3>How to interpret the chart ?</h3>
           <ul className="info_list">
             <li>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime

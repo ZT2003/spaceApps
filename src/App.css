@@ -79,6 +79,7 @@ li a {
 
 /*================================= dashboard =================================*/
 #dashboard {
+  font-family: var(--secondary-font);
   font-weight: var(--font-bold);
   margin: 20px 20px 20px 10px;
   padding: 10px 30px;
@@ -107,7 +108,16 @@ li a {
   }
 }
 /*================================= select country =================================*/
+.selector-div {
+  margin-left: 400px;
+}
 .select-country {
+  border: var(--second-color) solid 1px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: var(--font-bold);
+  color: var(--third-color);
+  padding: 10px;
   background-color: var(--fourth-color);
 }
 .select-country:after {
@@ -119,6 +129,9 @@ li a {
   height: 0;
   border: 6px solid transparent;
   border-color: #fff transparent transparent transparent;
+}
+.message {
+  text-align: center;
 }
 .card {
   padding: 2em;
