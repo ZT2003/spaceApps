@@ -1,7 +1,7 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import Papa from "papaparse";
-import codes from '../public/countryCode';
+import codes from "../public/countryCode";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -205,56 +205,56 @@ function App() {
           MIP Version 1.0
         </h3>
 
-      <select
-        name="country"
-        id="country"
-        value={country}
-        onChange={(event) => setCountry(event.target.value)}
-      >
-        <option value="ALL">ALL</option>
-        {codes.map((obj, index) => {
-          return (
-            <option value={obj.code} key={index}>
-              {obj.country}
-            </option>
-          );
-        })}
-      </select>
-      <br />
-      <select
-        name="experiment"
-        id="experiment"
-        value={experiment}
-        onChange={(event) => setExperiment(event.target.value)}
-      >
-        <option value="ALL">ALL</option>
-        <option value="IS">IS</option>
-        <option value="LNLG">LNLG</option>
-        <option value="LNLGIS">LNLGIS</option>
-        <option value="LNLGOGIS">LNLGOGIS</option>
-      </select>
-      <div>
-        <h2>Raw Data</h2>
-        {data.length > 0 && (
-          <table>
-            <thead>
-              <tr>
-                {Object.keys(data[0]).map((key, index) => {
-                  if (experiment === "ALL") {
-                    return <th key={index}>{key}</th>;
-                  } else {
-                    const words = key.split(/\s+/);
-                    if (
-                      words.includes(experiment) ||
-                      key === "Alpha 3 Code" ||
-                      key === "Year"
-                    ) {
+        <select
+          name="country"
+          id="country"
+          value={country}
+          onChange={(event) => setCountry(event.target.value)}
+        >
+          <option value="ALL">ALL</option>
+          {codes.map((obj, index) => {
+            return (
+              <option value={obj.code} key={index}>
+                {obj.country}
+              </option>
+            );
+          })}
+        </select>
+        <br />
+        <select
+          name="experiment"
+          id="experiment"
+          value={experiment}
+          onChange={(event) => setExperiment(event.target.value)}
+        >
+          <option value="ALL">ALL</option>
+          <option value="IS">IS</option>
+          <option value="LNLG">LNLG</option>
+          <option value="LNLGIS">LNLGIS</option>
+          <option value="LNLGOGIS">LNLGOGIS</option>
+        </select>
+        <div className="raw-data">
+          <h2>Raw Data</h2>
+          {data.length > 0 && (
+            <table>
+              <thead>
+                <tr>
+                  {Object.keys(data[0]).map((key, index) => {
+                    if (experiment === "ALL") {
                       return <th key={index}>{key}</th>;
+                    } else {
+                      const words = key.split(/\s+/);
+                      if (
+                        words.includes(experiment) ||
+                        key === "Alpha 3 Code" ||
+                        key === "Year"
+                      ) {
+                        return <th key={index}>{key}</th>;
+                      }
                     }
-                  }
-                })}
-              </tr>
-            </thead>
+                  })}
+                </tr>
+              </thead>
               <tbody>
                 {filteredData.map((row, rowIndex) => (
                   <tr key={rowIndex}>

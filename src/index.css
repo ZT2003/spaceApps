@@ -1,11 +1,22 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /*=========== Colors ===========*/
+  --first-color: #000926;
+  --second-color: #08b67f;
+  --third-color: #ffffff;
+  --fourth-color: #025e53;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 23px ..... */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*=========== Font weight ===========*/
+  --font-regular: 400;
+  --font-bold: 700;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,16 +34,21 @@ a:hover {
 }
 
 body {
+  background-color: var(--first-color);
+  /*
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100vh;*/
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: var(--fourth-color);
+  font-weight: var(--font-bold);
+  font-size: var(--h1-font-size);
 }
 
 button {

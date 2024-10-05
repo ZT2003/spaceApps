@@ -5,16 +5,24 @@ function MainNav() {
   return (
     <>
       <nav className="navigation">
+        <p className="logo">space technicians</p>
         <ul id="links-list">
           <li>
-            <img src={dashboard} /> <span>Dashboard</span>
+            <a href="#">
+              <img src={dashboard} /> Dashboard
+            </a>
           </li>
           <li>
-            <img src={team} />
-            <span>the team</span>
+            <a href="#">
+              <img src={team} />
+              the team
+            </a>
           </li>
           <li>
-            <img src={references} /> <span>references</span>
+            <a href="#">
+              <img src={references} />
+              references
+            </a>
           </li>
         </ul>
       </nav>
