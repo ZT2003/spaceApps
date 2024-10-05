@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap");
+
 :root {
   /*=========== Colors ===========*/
   --first-color: #000926;
@@ -17,15 +19,15 @@
   /*=========== Font weight ===========*/
   --font-regular: 400;
   --font-bold: 700;
-
+  /*
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;*/
 }
 
 a {
-  font-weight: 500;
+  font-weight: 700;
   color: #646cff;
   text-decoration: inherit;
 }
@@ -44,8 +46,6 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
   color: var(--fourth-color);
   font-weight: var(--font-bold);
   font-size: var(--h1-font-size);
