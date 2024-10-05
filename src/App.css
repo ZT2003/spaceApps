@@ -32,7 +32,9 @@
   flex-direction: column;
   padding: 0;
 }
-
+.raw-data {
+  display: none;
+}
 #links-list * {
   padding: 10px;
 }

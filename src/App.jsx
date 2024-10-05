@@ -422,7 +422,7 @@ function App() {
           <option value="LNLGIS">LNLGIS</option>
           <option value="LNLGOGIS">LNLGOGIS</option>
         </select>
-        <div>
+        <div className="raw-data">
           <h2>Raw Data</h2>
           {data.length > 0 && (
             <table>
