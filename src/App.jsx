@@ -205,7 +205,6 @@ function App() {
           MIP Version 1.0
         </h3>
 
-<<<<<<< HEAD
       <select
         name="country"
         id="country"
@@ -256,62 +255,6 @@ function App() {
                 })}
               </tr>
             </thead>
-            <tbody>
-              {filteredData.map((row, rowIndex) => (
-                <tr key={rowIndex}>
-                  {Object.entries(row).map(([property, value], colIndex) => {
-=======
-        <select
-          name="country"
-          id="country"
-          value={country}
-          onChange={(event) => setCountry(event.target.value)}
-        >
-          <option value="ALL">ALL</option>
-          {countries.map((code, index) => {
-            return (
-              <option value={code} key={index}>
-                {code}
-              </option>
-            );
-          })}
-        </select>
-        <br />
-        <select
-          name="experiment"
-          id="experiment"
-          value={experiment}
-          onChange={(event) => setExperiment(event.target.value)}
-        >
-          <option value="ALL">ALL</option>
-          <option value="IS">IS</option>
-          <option value="LNLG">LNLG</option>
-          <option value="LNLGIS">LNLGIS</option>
-          <option value="LNLGOGIS">LNLGOGIS</option>
-        </select>
-        <div className="raw-data">
-          <h2>Raw Data</h2>
-          {data.length > 0 && (
-            <table>
-              <thead>
-                <tr>
-                  {Object.keys(data[0]).map((key, index) => {
->>>>>>> 1814ddf379441f6240119f9603b671d4dc18a98b
-                    if (experiment === "ALL") {
-                      return <th key={index}>{key}</th>;
-                    } else {
-                      const words = key.split(/\s+/);
-                      if (
-                        words.includes(experiment) ||
-                        key === "Alpha 3 Code" ||
-                        key === "Year"
-                      ) {
-                        return <th key={index}>{key}</th>;
-                      }
-                    }
-                  })}
-                </tr>
-              </thead>
               <tbody>
                 {filteredData.map((row, rowIndex) => (
                   <tr key={rowIndex}>
