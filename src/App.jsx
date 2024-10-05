@@ -300,22 +300,35 @@ function App() {
           <h3>How to interpret the chart ?</h3>
           <ul className="info_list">
             <li>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              magnam, enim ex quia qui, quidem ipsum illo cupiditate, ullam
-              numquam maiores doloribus nam molestias reiciendis quas
-              repellendus minus hic eius.
+              This barchart contains annual net fluxes of CO₂ on a 1-degree grid
+              for a six-year period (2015-2020)
             </li>
             <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-              repudiandae vero modi ipsam! Mollitia veniam exercitationem nemo
-              recusandae, non tenetur.
+              The chart showcase: net carbon exchange (NCE), fossil fuel
+              emissions (FF), and lateral fluxes due to crop trade, wood trade,
+              and river export.
             </li>
             <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex earum
-              reiciendis quidem nemo aperiam vero, perferendis dignissimos
-              quibusdam, rem enim est illum. Sapiente alias culpa facilis, iusto
-              assumenda deserunt voluptate eligendi exercitationem, aliquam
-              cupiditate vitae?
+              Data is provided in units of grams of carbon dioxide per square
+              meter per year (g CO₂/m2/yr)
+            </li>
+          </ul>
+          <br />
+          <br />
+          <h3>important definitions</h3>
+          <ul className="info_list">
+            <li>
+              This barchart contains annual net fluxes of CO₂ on a 1-degree grid
+              for a six-year period (2015-2020)
+            </li>
+            <li>
+              The chart showcase: net carbon exchange (NCE), fossil fuel
+              emissions (FF), and lateral fluxes due to crop trade, wood trade,
+              and river export.
+            </li>
+            <li>
+              Data is provided in units of grams of carbon dioxide per square
+              meter per year (g CO₂/m2/yr)
             </li>
           </ul>
         </div>
