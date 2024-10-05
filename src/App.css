@@ -29,13 +29,14 @@ nav {
   overflow: auto;
   color: var(--third-color);
   text-transform: uppercase;
-  font-size: var(--h3-font-size);
+
   /*
   flex: 1;
   margin: 30px;*/
 }
 
 .logo {
+  font-size: 1.3rem;
   font-weight: var(--font-bold);
   color: var(--third-color);
   height: 6em;
@@ -60,9 +61,13 @@ nav {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  padding-right: 30px;
+  padding: 0 20px;
+}
+#links-list li {
+  padding-top: 10px;
 }
 li a {
+  font-size: 14px;
   padding: 10px;
 }
 #navigation a {
