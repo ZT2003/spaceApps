@@ -5,6 +5,9 @@
   text-align: center;
   display: flex;
 }
+nav {
+  margin: 0px 200px 10px 0px;
+}
 #navigation {
   flex: 1;
   margin: 30px;
