@@ -35,8 +35,8 @@
 .raw-data {
   display: none;
 }
-#links-list * {
-  padding: 10px;
+#links-list li {
+  padding: 0px;
 }
 @keyframes logo-spin {
   from {
@@ -59,4 +59,8 @@
 
 .read-the-docs {
   color: #888;
+}
+li img,
+li span {
+  padding: 0 10px;
 }
