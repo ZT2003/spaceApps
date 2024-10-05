@@ -206,6 +206,7 @@ function App() {
         </h3>
 
         <select
+          className="select-country"
           name="country"
           id="country"
           value={country}
@@ -222,6 +223,7 @@ function App() {
         </select>
         <br />
         <select
+          className="raw-data"
           name="experiment"
           id="experiment"
           value={experiment}
@@ -279,7 +281,7 @@ function App() {
             </table>
           )}
         </div>
-        <div>
+        <div className="raw-data">
           {country === "ALL" ? (
             <h2>Please select a country to display charts</h2>
           ) : (
@@ -288,6 +290,28 @@ function App() {
               <Line options={LineOptions} data={Linedata} />
             </div>
           )}
+        </div>
+        <div id="info">
+          <ul className="info_list">
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
+              magnam, enim ex quia qui, quidem ipsum illo cupiditate, ullam
+              numquam maiores doloribus nam molestias reiciendis quas
+              repellendus minus hic eius.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+              repudiandae vero modi ipsam! Mollitia veniam exercitationem nemo
+              recusandae, non tenetur.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex earum
+              reiciendis quidem nemo aperiam vero, perferendis dignissimos
+              quibusdam, rem enim est illum. Sapiente alias culpa facilis, iusto
+              assumenda deserunt voluptate eligendi exercitationem, aliquam
+              cupiditate vitae?
+            </li>
+          </ul>
         </div>
       </div>
     </>
