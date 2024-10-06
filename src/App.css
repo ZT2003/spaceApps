@@ -69,8 +69,7 @@ nav {
 
 #dashboard {
   font-weight: var(--font-regular);
-  /*margin: 20px 20px 20px 250px;*/
-  margin: auto 20px auto 250px;
+  margin: 20px 20px 20px 250px;
   padding: 10px 30px;
   height: fit-content;
   border-radius: 2rem;
@@ -145,11 +144,26 @@ nav {
   color: var(--second-color);
 }
 /*================================= team page =================================*/
+#team {
+  font-weight: var(--font-regular);
+  /*margin: 20px 20px 20px 250px;*/
+  margin: 20px 20px 20px 250px;
+  padding: 10px 30px;
+  height: fit-content;
+  border-radius: 2rem;
+  border-color: var(--second-color);
+  border-style: solid;
+  border-width: 5px;
+  color: var(--third-color);
+  height: 570px;
+}
+
 .team-cards-div {
   display: flex;
   justify-content: center;
   color: var(--second-color);
   text-align: center;
+  padding-top: 8%;
 }
 
 .team-cards-div h3,
@@ -159,9 +173,46 @@ p {
 .team-card {
   background-color: var(--fourth-color);
   margin: 10px;
+  height: 284px;
   border: var(--second-color) 2px solid;
   border-radius: 20px;
 }
 .team-card img {
   width: 40%;
+}
+
+.team-card a {
+  display: block;
+  color: var(--first-color);
+  text-decoration: none;
+  font-weight: var(--font-medium);
+}
+
+/*================================= reference page =================================*/
+#reference {
+  font-weight: var(--font-regular);
+  /*margin: 20px 20px 20px 250px;*/
+  margin: 20px 20px 20px 250px;
+  padding: 10px 30px;
+  height: fit-content;
+  border-radius: 2rem;
+  border-color: var(--second-color);
+  border-style: solid;
+  border-width: 5px;
+  color: var(--third-color);
+  height: 570px;
+  width: 1083.264px;
+}
+
+#reference .content {
+  text-align: center;
+  padding-top: 15%;
+
+  font-size: var(--h2-font-size);
+}
+
+#reference .content a {
+  color: var(--second-color);
+  text-decoration: none;
+  font-weight: var(--font-medium);
 }

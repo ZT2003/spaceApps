@@ -181,11 +181,13 @@ function Dash({ english, setEnglish }) {
     <>
       <MainNav english={english} setEnglish={setEnglish} />
 
-      <div id="dashboard" className="arabic">
+      <div id="dashboard">
         {english ? (
           <h1>Explore the yearly emissions of CO2 in your country</h1>
         ) : (
-          <h1>استكشف انبعاثات ثاني أكسيد الكربون السنوية في بلدك</h1>
+          <h1 className="arabic">
+            استكشف انبعاثات ثاني أكسيد الكربون السنوية في بلدك
+          </h1>
         )}
 
         <div className="selector-div">
@@ -214,7 +216,7 @@ function Dash({ english, setEnglish }) {
                 Please select a country to display charts
               </h3>
             ) : (
-              <h3 className="message">اختر دولة لرؤية الإحداثيات</h3>
+              <h3 className="message arabic">اختر دولة لرؤية الإحداثيات</h3>
             )
           ) : (
             <div>
@@ -294,7 +296,7 @@ function Dash({ english, setEnglish }) {
             </ul>
           </div>
         ) : (
-          <div id="info">
+          <div id="info" className="arabic">
             <h3>كيف يمكن قراءة الرسم البياني؟</h3>
             <ul className="info_list">
               <li>
