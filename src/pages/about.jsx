@@ -6,8 +6,9 @@ function AboutUs({ english, setEnglish }) {
   return (
     <>
       <MainNav english={english} setEnglish={setEnglish} />
-      <h1> Meet the Team !!</h1>
-      <div>
+
+      <div id="dashboard">
+        <h1> Meet the Team !!</h1>
         <div className="team-cards-div">
           <div className="team-card">
             <img src={tech} alt="" />

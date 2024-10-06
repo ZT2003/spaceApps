@@ -49,16 +49,16 @@ nav {
 #links-list li {
   padding-top: 10px;
 }
-li a {
+/*li a {
   font-size: 14px;
   padding: 10px;
-}
+}*/
 .navigation a {
   display: block;
   color: var(--third-color);
-  padding: 16px;
+  padding: 10px;
+  font-size: 16px;
   text-decoration: none;
-  text-align: center;
 }
 
 .navigation a:hover {
