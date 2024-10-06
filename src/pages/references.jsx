@@ -5,9 +5,11 @@ function References({ english, setEnglish }) {
   return (
     <>
       <MainNav english={english} setEnglish={setEnglish} />
-      <div id="dashboard">
+      {
+        (english)?
+        <div id="dashboard">
         <h1>references:</h1>
-        <p> all references/data were taken from the oficial Nasa website</p>
+        <p> all references/data were taken from the official Nasa website</p>
         <p>
           {" "}
           you can find more info{" "}
@@ -16,6 +18,19 @@ function References({ english, setEnglish }) {
           </a>
         </p>
       </div>
+      :
+      <div id="dashboard">
+        <h1>المصادر:</h1>
+        <p>كل المصادر والمعلومات أُخذت من صفحة ناسا الرسمية</p>
+        <p>
+          {" "}
+          للمزيد من المعلومات: {" "}
+          <a href="https://www.spaceappschallenge.org/nasa-space-apps-2024/challenges/uncover-the-role-of-greenhouse-gases-in-your-neighborhood/?tab=details">
+            اضغط هنا
+          </a>
+        </p>
+      </div>
+      }
     </>
   );
 }

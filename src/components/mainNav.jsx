@@ -12,7 +12,11 @@ function MainNav({ english, setEnglish }) {
   return (
     <>
       <nav className="navigation">
-        <p className="logo">space technicians</p>
+        {english ? (
+          <p className="logo">space technicians</p>
+        ) : (
+          <p className="logo">فنيات الفضاء</p>
+        )}
         {english ? (
           <button onClick={() => setEnglish(false)}>ع</button>
         ) : (
@@ -21,19 +25,17 @@ function MainNav({ english, setEnglish }) {
         <ul id="links-list">
           <li>
             <NavLink to="/">
-              <img src={dashboard} /> Dashboard
+              <img src={dashboard} /> {english ? "Dashboard" : "لوحة البيانات"}
             </NavLink>
           </li>
           <li>
             <NavLink to="/about">
-              <img src={team} />
-              the team
+              <img src={team} /> {english ? "The Team" : "الفريق"}
             </NavLink>
           </li>
           <li>
             <NavLink to="/ref">
-              <img src={references} />
-              references
+              <img src={references} /> {english ? "References" : "المصادر"}
             </NavLink>
           </li>
         </ul>

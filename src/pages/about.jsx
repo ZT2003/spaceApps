@@ -7,6 +7,8 @@ function AboutUs({ english, setEnglish }) {
     <>
       <MainNav english={english} setEnglish={setEnglish} />
 
+    {
+      (english)?
       <div id="dashboard">
         <h1> Meet the Team !!</h1>
         <div className="team-cards-div">
@@ -14,19 +16,47 @@ function AboutUs({ english, setEnglish }) {
             <img src={tech} alt="" />
             <h3>Fatima Ali</h3>
             <p> a programming student in Bahrain Polytechnic</p>
+            <a href="https://www.linkedin.com/in/fatema-ebrahim-4a4245294/">contact</a>
           </div>
           <div className="team-card">
             <img src={tech} alt="" />
-            <h3>Fatima Ali</h3>
+            <h3>Batool Albonni</h3>
             <p> a programming student in Bahrain Polytechnic</p>
+            <a href="https://www.linkedin.com/in/batool-albonni/">contact</a>
           </div>
           <div className="team-card">
             <img src={tech} alt="" />
-            <h3>Fatima Ali</h3>
-            <p> a programming student in Bahrain Polytechnic</p>
+            <h3>Zainab Tarada</h3>
+            <p>a Computer Science - Cloud Computing student in University of Bahrain</p>
+            <a href="https://www.linkedin.com/in/zainab-tarada-156793256">contact</a>
           </div>
         </div>
       </div>
+      :
+      <div id="dashboard">
+        <h1>تعرف على الفريق</h1>
+        <div className="team-cards-div">
+          <div className="team-card">
+            <img src={tech} alt="" />
+            <h3>فاطمة علي</h3>
+            <p>طالبة برمجة في جامعة البوليتكنك البحرين</p>
+            <a href="https://www.linkedin.com/in/fatema-ebrahim-4a4245294/">للتواصل</a>
+          </div>
+          <div className="team-card">
+            <img src={tech} alt="" />
+            <h3>بتول البني</h3>
+            <p>طالبة برمجة في جامعة البوليتكنك البحرين</p>
+            <a href="https://www.linkedin.com/in/batool-albonni/">للتواصل</a>
+          </div>
+          <div className="team-card">
+            <img src={tech} alt="" />
+            <h3>زينب طرّاده</h3>
+            <p>طالبة علوم حاسوب - الحوسبة السحابية في جامعة البحرين</p>
+            <a href="https://www.linkedin.com/in/zainab-tarada-156793256">للتواصل</a>
+          </div>
+        </div>
+      </div>
+    }
     </>
   );
 }
