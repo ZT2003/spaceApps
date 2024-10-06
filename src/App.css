@@ -66,8 +66,8 @@ li a {
 }
 
 /*================================= dashboard =================================*/
+
 #dashboard {
-  font-family: var(--secondary-font);
   font-weight: var(--font-regular);
   margin: 20px 20px 20px 250px;
   padding: 10px 30px;

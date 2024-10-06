@@ -2,22 +2,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /*======================================================= Fonts =======================================================*/
 @font-face {
-  font-family: 'Montserrat-Arabic';
-  src: url('font/ArbFONTS-Montserrat-Arabic-Regular.ttf') format("truetype");
+  font-family: "Montserrat-Arabic";
+  src: url("assets/font/ArbFONTS-Montserrat-Arabic-Regular.ttf")
+    format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat-Arabic';
-  src: url('font/ArbFONTS-Montserrat-Arabic-ExtraBold.ttf') format("truetype");
+  font-family: "Montserrat-Arabic";
+  src: url("assets/font/ArbFONTS-Montserrat-Arabic-ExtraBold.ttf")
+    format("truetype");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Montserrat-Arabic';
-  src: url('font/ArbFONTS-Montserrat-Arabic-SemiBold.ttf') format("truetype");
+  font-family: "Montserrat-Arabic";
+  src: url("assets/font/ArbFONTS-Montserrat-Arabic-SemiBold.ttf")
+    format("truetype");
   font-weight: 600;
   font-style: normal;
 }
@@ -51,7 +54,6 @@
   -moz-osx-font-smoothing: grayscale;*/
 }
 
-
 /*==================================== Base ====================================*/
 body {
   background-color: var(--first-color);
@@ -62,7 +64,7 @@ body {
   font-size: var(--normal-font-size);
   color: #025e53;
   display: flex;
-  
+
   /*font-family: "Syncopate", system-ui;
   font-size: var(--normal-font-size);
   color: #025e53;
@@ -81,14 +83,13 @@ h1 {
   text-align: center;
 }
 
-
-p{
+p {
   color: var(--second-color);
-  font-weight: var(--font-regular); 
+  font-weight: var(--font-regular);
 }
 
-b{
-  font-weight: var(--font-medium);    
+b {
+  font-weight: var(--font-medium);
 }
 
 /*a {

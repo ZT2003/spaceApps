@@ -25,7 +25,7 @@ ChartJS.register(
   Legend
 );
 
-function Dash({english, setEnglish}) {
+function Dash({ english, setEnglish }) {
   const [data, setData] = useState([]);
   const [country, setCountry] = useState("ALL");
   const [filteredData, setFilteredData] = useState([]);
@@ -185,7 +185,9 @@ function Dash({english, setEnglish}) {
         {english ? (
           <h1>Explore the yearly emissions of CO2 in your country</h1>
         ) : (
-          <h1>استكشف انبعاثات ثاني أكسيد الكربون السنوية في بلدك</h1>
+          <h1 className="arabic-font">
+            استكشف انبعاثات ثاني أكسيد الكربون السنوية في بلدك
+          </h1>
         )}
 
         <div className="selector-div">
@@ -218,7 +220,10 @@ function Dash({english, setEnglish}) {
             )
           ) : (
             <div>
-              <Bar options={(english)? barOptions : barOptionsAr} data={(english)? barData : barDataAr} />
+              <Bar
+                options={english ? barOptions : barOptionsAr}
+                data={english ? barData : barDataAr}
+              />
             </div>
           )}
         </div>
