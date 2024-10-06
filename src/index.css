@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   /*=========== Colors ===========*/
   --first-color: #000926;
@@ -19,6 +19,8 @@
   /*=========== Font weight ===========*/
   --font-regular: 400;
   --font-bold: 700;
+
+  --secondary-font: "Montserrat", serif;
   /*
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -43,6 +45,7 @@ h1 {
   color: var(--fourth-color);
   font-weight: var(--font-bold);
   font-size: var(--h1-font-size);
+  text-align: center;
 }
 
 button {

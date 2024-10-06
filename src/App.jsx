@@ -2,6 +2,9 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import Papa from "papaparse";
 import codes from "../public/countryCode";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AboutUs from "./pages/about";
+
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -190,28 +193,28 @@ function App() {
   return (
     <>
       <MainNav />
-      <div id="dashboard">
-        <h3>
-          Dataset name: Pilot top-down CO2 Budget constrained by the v10 OCO-2
-          MIP Version 1.0
-        </h3>
 
-        <select
-          className="select-country"
-          name="country"
-          id="country"
-          value={country}
-          onChange={(event) => setCountry(event.target.value)}
-        >
-          <option value="ALL">ALL</option>
-          {codes.map((obj, index) => {
-            return (
-              <option value={obj.code} key={index}>
-                {obj.country}
-              </option>
-            );
-          })}
-        </select>
+      <div id="dashboard">
+        <h1>Explore the yearly emissions of CO2 in your country</h1>
+
+        <div className="selector-div">
+          <select
+            className="select-country"
+            name="country"
+            id="country"
+            value={country}
+            onChange={(event) => setCountry(event.target.value)}
+          >
+            <option value="ALL">ALL</option>
+            {codes.map((obj, index) => {
+              return (
+                <option value={obj.code} key={index}>
+                  {obj.country}
+                </option>
+              );
+            })}
+          </select>
+        </div>
         <br />
         <select
           className="raw-data"
@@ -272,35 +275,51 @@ function App() {
             </table>
           )}
         </div>
-        <div className="">
+        <div>
           {country === "ALL" ? (
-            <h2>Please select a country to display charts</h2>
+            <h3 className="message">
+              Please select a country to display charts
+            </h3>
           ) : (
             <div>
               <Bar options={barOptions} data={barData} />
-              <Line options={LineOptions} data={Linedata} />
+              {/* <!-- <Line options={LineOptions} data={Linedata} /> --> */}
             </div>
           )}
         </div>
         <div id="info">
+          <h3>How to interpret the chart ?</h3>
           <ul className="info_list">
             <li>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              magnam, enim ex quia qui, quidem ipsum illo cupiditate, ullam
-              numquam maiores doloribus nam molestias reiciendis quas
-              repellendus minus hic eius.
+              This barchart contains annual net fluxes of CO₂ on a 1-degree grid
+              for a six-year period (2015-2020)
             </li>
             <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-              repudiandae vero modi ipsam! Mollitia veniam exercitationem nemo
-              recusandae, non tenetur.
+              The chart showcase: net carbon exchange (NCE), fossil fuel
+              emissions (FF), and lateral fluxes due to crop trade, wood trade,
+              and river export.
             </li>
             <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex earum
-              reiciendis quidem nemo aperiam vero, perferendis dignissimos
-              quibusdam, rem enim est illum. Sapiente alias culpa facilis, iusto
-              assumenda deserunt voluptate eligendi exercitationem, aliquam
-              cupiditate vitae?
+              Data is provided in units of grams of carbon dioxide per square
+              meter per year (g CO₂/m2/yr)
+            </li>
+          </ul>
+          <br />
+          <br />
+          <h3>important definitions</h3>
+          <ul className="info_list">
+            <li>
+              This barchart contains annual net fluxes of CO₂ on a 1-degree grid
+              for a six-year period (2015-2020)
+            </li>
+            <li>
+              The chart showcase: net carbon exchange (NCE), fossil fuel
+              emissions (FF), and lateral fluxes due to crop trade, wood trade,
+              and river export.
+            </li>
+            <li>
+              Data is provided in units of grams of carbon dioxide per square
+              meter per year (g CO₂/m2/yr)
             </li>
           </ul>
         </div>

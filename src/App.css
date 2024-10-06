@@ -29,13 +29,14 @@ nav {
   overflow: auto;
   color: var(--third-color);
   text-transform: uppercase;
-  font-size: var(--h3-font-size);
+
   /*
   flex: 1;
   margin: 30px;*/
 }
 
 .logo {
+  font-size: 1.3rem;
   font-weight: var(--font-bold);
   color: var(--third-color);
   height: 6em;
@@ -60,9 +61,13 @@ nav {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  padding-right: 30px;
+  padding: 0 20px;
+}
+#links-list li {
+  padding-top: 10px;
 }
 li a {
+  font-size: 14px;
   padding: 10px;
 }
 #navigation a {
@@ -79,10 +84,11 @@ li a {
 
 /*================================= dashboard =================================*/
 #dashboard {
+  font-family: var(--secondary-font);
   font-weight: var(--font-bold);
   margin: 20px 20px 20px 10px;
   padding: 10px 30px;
-  height: 600px;
+  height: fit-content;
   border-radius: 2rem;
   border-color: var(--second-color);
   border-style: solid;
@@ -107,7 +113,16 @@ li a {
   }
 }
 /*================================= select country =================================*/
+.selector-div {
+  margin-left: 400px;
+}
 .select-country {
+  border: var(--second-color) solid 1px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: var(--font-bold);
+  color: var(--third-color);
+  padding: 10px;
   background-color: var(--fourth-color);
 }
 .select-country:after {
@@ -119,6 +134,9 @@ li a {
   height: 0;
   border: 6px solid transparent;
   border-color: #fff transparent transparent transparent;
+}
+.message {
+  text-align: center;
 }
 .card {
   padding: 2em;
