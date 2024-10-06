@@ -1,8 +1,10 @@
 import tech from "../assets/tech.png";
+import MainNav from "../components/mainNav";
 
 function AboutUs() {
   return (
     <>
+    <MainNav />
       <h1> Meet the Team !!</h1>
       <div className="team-cards-div">
         <div className="team-card">
