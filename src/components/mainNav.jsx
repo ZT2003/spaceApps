@@ -1,6 +1,6 @@
-import dashboard from "../assets/dashboard.svg";
-import team from "../assets/team.svg";
-import references from "../assets/references.svg";
+import dashboard from "../assets/icon/dashboard.svg";
+import team from "../assets/icon/team.svg";
+import references from "../assets/icon/references.svg";
 import { BrowserRouter as Router, Route, Routes, NavLink } from "react-router-dom";
 
 function MainNav({english, setEnglish}) {
