@@ -69,7 +69,8 @@ nav {
 
 #dashboard {
   font-weight: var(--font-regular);
-  margin: 20px 20px 20px 250px;
+  /*margin: 20px 20px 20px 250px;*/
+  margin: auto 20px auto 250px;
   padding: 10px 30px;
   height: fit-content;
   border-radius: 2rem;
