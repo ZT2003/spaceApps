@@ -1,26 +1,9 @@
-#root {
-  font-family: "Syncopate", system-ui;
-  font-size: var(--normal-font-size);
-  color: #025e53;
-  /*max-width: 1280px;*/
-  /*padding: 2rem;*/
-  display: flex;
-  /*
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  display: flex;*/
-}
-p {
-  color: var(--second-color);
-  font-weight: 400;
-}
+/*==================================== navigation ====================================*/
 /*
 nav {
   margin: 0px 200px 10px 0px;
 }*/
-#navigation {
+.navigation {
   margin: 0;
   padding: 0.9375rem;
   width: 250px;
@@ -52,7 +35,7 @@ nav {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-#navigation img {
+.navigation img {
   height: 0.938rem;
   margin: 0 0.5rem;
 }
@@ -66,27 +49,27 @@ nav {
 #links-list li {
   padding-top: 10px;
 }
-li a {
+/*li a {
   font-size: 14px;
   padding: 10px;
-}
-#navigation a {
+}*/
+.navigation a {
   display: block;
   color: var(--third-color);
-  padding: 16px;
+  padding: 10px;
+  font-size: 16px;
   text-decoration: none;
-  text-align: center;
 }
 
-#navigation a:hover {
+.navigation a:hover {
   color: var(--fourth-color);
 }
 
 /*================================= dashboard =================================*/
+
 #dashboard {
-  font-family: var(--secondary-font);
-  font-weight: var(--font-bold);
-  margin: 20px 20px 20px 10px;
+  font-weight: var(--font-regular);
+  margin: 20px 20px 20px 250px;
   padding: 10px 30px;
   height: fit-content;
   border-radius: 2rem;
@@ -121,7 +104,7 @@ li a {
   border: var(--second-color) solid 1px;
   border-radius: 10px;
   text-align: center;
-  font-weight: var(--font-bold);
+  font-weight: var(--font-regular);
   color: var(--third-color);
   padding: 10px;
   background-color: var(--fourth-color);
@@ -165,6 +148,18 @@ li a {
   display: flex;
   justify-content: center;
   color: var(--second-color);
+  text-align: center;
+}
+
+.team-cards-div h3,
+p {
+  color: var(--third-color);
+}
+.team-card {
+  background-color: var(--fourth-color);
+  margin: 10px;
+  border: var(--second-color) 2px solid;
+  border-radius: 20px;
 }
 .team-card img {
   width: 40%;
