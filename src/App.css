@@ -93,6 +93,7 @@ li a {
   border-color: var(--second-color);
   border-style: solid;
   border-width: 5px;
+  color: var(--third-color);
 }
 .raw-data {
   display: none;
@@ -149,7 +150,13 @@ li a {
 #info {
   margin-top: 40px;
 }
-
+#info li::marker {
+  color: var(--second-color); /* change the bullet color to orange */
+}
 #info ul li {
   margin-top: 40px;
+}
+
+.info_list li b {
+  color: var(--second-color);
 }

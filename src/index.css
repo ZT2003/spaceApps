@@ -42,7 +42,6 @@ body {
 }
 
 h1 {
-  color: var(--fourth-color);
   font-weight: var(--font-bold);
   font-size: var(--h1-font-size);
   text-align: center;
