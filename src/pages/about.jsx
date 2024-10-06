@@ -1,10 +1,12 @@
+import { useState } from "react";
 import tech from "../assets/tech.png";
 import MainNav from "../components/mainNav";
 
-function AboutUs() {
+function AboutUs({english, setEnglish}) {
+
   return (
     <>
-    <MainNav />
+    <MainNav english={english} setEnglish={setEnglish} />
       <h1> Meet the Team !!</h1>
       <div className="team-cards-div">
         <div className="team-card">

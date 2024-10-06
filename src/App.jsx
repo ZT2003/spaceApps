@@ -3,15 +3,18 @@ import { BrowserRouter as Router, Route, Routes, BrowserRouter } from "react-rou
 import AboutUs from "./pages/about";
 import Dash from "./pages/dashboard";
 import References from "./pages/references";
+import { useState } from "react";
 
 function App() {
+  const [english, setEnglish] = useState(true);
+
   return(
     <BrowserRouter>
       <Routes>
         <Route path="/">
-          <Route index element={<Dash />} />
-          <Route path="about" element={<AboutUs />} />
-          <Route path="ref" element={<References />} />
+          <Route index element={<Dash english={english} setEnglish={setEnglish} />} />
+          <Route path="about" element={<AboutUs english={english} setEnglish={setEnglish} />} />
+          <Route path="ref" element={<References english={english} setEnglish={setEnglish} />} />
         </Route>
       </Routes>
     </BrowserRouter>

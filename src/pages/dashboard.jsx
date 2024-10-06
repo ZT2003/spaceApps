@@ -25,23 +25,10 @@ ChartJS.register(
   Legend
 );
 
-import { Line } from "react-chartjs-2";
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
-
-function Dash() {
+function Dash({english, setEnglish}) {
   const [data, setData] = useState([]);
   const [country, setCountry] = useState("ALL");
-  const [experiment, setExperiment] = useState("ALL");
   const [filteredData, setFilteredData] = useState([]);
-  const [english, setEnglish] = useState(true);
 
   useEffect(() => {
     fetch("/data.csv")
@@ -190,64 +177,6 @@ function Dash() {
     },
   };
 
-  const Linedata = {
-    labels: [2015, 2016, 2017, 2018, 2019, 2020],
-    datasets: [
-      {
-        label: "IS dC_loss (TgCO2)",
-        data: filteredData.map((row) => {
-          return row["IS dC_loss (TgCO2)"];
-        }),
-        borderColor: "rgb(255, 205, 86)",
-      },
-      {
-        label: "LNLG dC_loss (TgCO2)",
-        data: filteredData.map((row) => {
-          return row["LNLG dC_loss (TgCO2)"];
-        }),
-        borderColor: "rgb(255, 99, 132)",
-      },
-      {
-        label: "LNLGIS dC_loss (TgCO2)",
-        data: filteredData.map((row) => {
-          return row["LNLGIS dC_loss (TgCO2)"];
-        }),
-        borderColor: "rgb(75, 192, 192)",
-      },
-      {
-        label: "LNLGOGIS dC_loss (TgCO2)",
-        data: filteredData.map((row) => {
-          return row["LNLGOGIS dC_loss (TgCO2)"];
-        }),
-        borderColor: "rgb(153, 102, 255)",
-      },
-    ],
-  };
-  const LineOptions = {
-    responsive: true,
-    plugins: {
-      title: {
-        display: true,
-        text: "Time Series of CO2 Emissions (dC_loss) from 2015 to 2020",
-      },
-    },
-    scales: {
-      y: {
-        beginAtZero: false,
-        title: {
-          display: true,
-          text: "dC_loss (TgCO2)",
-        },
-      },
-      x: {
-        title: {
-          display: true,
-          text: "Year",
-        },
-      },
-    },
-  };
-
   return (
     <>
       <MainNav english={english} setEnglish={setEnglish} />
@@ -277,65 +206,6 @@ function Dash() {
           </select>
         </div>
         <br />
-        <select
-          className="raw-data"
-          name="experiment"
-          id="experiment"
-          value={experiment}
-          onChange={(event) => setExperiment(event.target.value)}
-        >
-          <option value="ALL">ALL</option>
-          <option value="IS">IS</option>
-          <option value="LNLG">LNLG</option>
-          <option value="LNLGIS">LNLGIS</option>
-          <option value="LNLGOGIS">LNLGOGIS</option>
-        </select>
-        <div className="raw-data">
-          <h2>Raw Data</h2>
-          {data.length > 0 && (
-            <table>
-              <thead>
-                <tr>
-                  {Object.keys(data[0]).map((key, index) => {
-                    if (experiment === "ALL") {
-                      return <th key={index}>{key}</th>;
-                    } else {
-                      const words = key.split(/\s+/);
-                      if (
-                        words.includes(experiment) ||
-                        key === "Alpha 3 Code" ||
-                        key === "Year"
-                      ) {
-                        return <th key={index}>{key}</th>;
-                      }
-                    }
-                  })}
-                </tr>
-              </thead>
-              <tbody>
-                {filteredData.map((row, rowIndex) => (
-                  <tr key={rowIndex}>
-                    {Object.entries(row).map(([property, value], colIndex) => {
-                      if (experiment === "ALL") {
-                        return <td key={colIndex}>{value}</td>;
-                      } else {
-                        const words = property.split(/\s+/);
-                        if (
-                          words.includes(experiment) ||
-                          property === "Alpha 3 Code" ||
-                          property === "Year"
-                        ) {
-                          return <td key={colIndex}>{value}</td>;
-                        }
-                        return null; 
-                      }
-                    })}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          )}
-        </div>
         <div>
           {country === "ALL" ? ( (english)?
             <h3 className="message">
@@ -348,7 +218,6 @@ function Dash() {
           ) : (
             <div>
               <Bar options={(english)? barOptions : barOptionsAr} data={(english)? barData : barDataAr} />
-              {/* <!-- <Line options={LineOptions} data={Linedata} /> --> */}
             </div>
           )}
         </div>
