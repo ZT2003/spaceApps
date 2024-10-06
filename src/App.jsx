@@ -42,9 +42,9 @@ ChartJS.register(
 function App() {
   const [data, setData] = useState([]);
   const [country, setCountry] = useState("ALL");
-  const [countries, setCountries] = useState([]);
   const [experiment, setExperiment] = useState("ALL");
   const [filteredData, setFilteredData] = useState([]);
+  const [english, setEnglish] = useState(true);
 
   useEffect(() => {
     fetch("/data.csv")
@@ -60,15 +60,6 @@ function App() {
       })
       .catch((error) => console.error(error));
   }, []);
-
-  useEffect(() => {
-    const codes = [];
-    data.map((row) => {
-      const code = row["Alpha 3 Code"];
-      if (code !== codes[codes.length - 1]) codes.push(code);
-    });
-    setCountries(codes);
-  }, [data]);
 
   useEffect(() => {
     if (country === "ALL") {
@@ -111,10 +102,10 @@ function App() {
   const barOptions = {
     scales: {
       y: {
-        beginAtZero: true, // Allows negative and positive values
+        beginAtZero: true,
         ticks: {
           callback: function (value) {
-            return value + " TgCO2"; // Adds units
+            return value + " TgCO2"; 
           },
         },
         title: {
@@ -267,15 +258,15 @@ function App() {
                       if (experiment === "ALL") {
                         return <td key={colIndex}>{value}</td>;
                       } else {
-                        const words = property.split(/\s+/); // Split property into words
+                        const words = property.split(/\s+/);
                         if (
                           words.includes(experiment) ||
                           property === "Alpha 3 Code" ||
                           property === "Year"
                         ) {
-                          return <td key={colIndex}>{value}</td>; // Return the column if the condition matches
+                          return <td key={colIndex}>{value}</td>;
                         }
-                        return null; // Skip columns that don't match
+                        return null; 
                       }
                     })}
                   </tr>
