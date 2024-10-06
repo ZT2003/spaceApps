@@ -2,7 +2,9 @@ import dashboard from "../assets/dashboard.svg";
 import team from "../assets/team.svg";
 import references from "../assets/references.svg";
 import { BrowserRouter as Router, Route, Routes, NavLink } from "react-router-dom";
+
 function MainNav({english, setEnglish}) {
+  
   return (
     <>
       <nav className="navigation">
