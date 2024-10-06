@@ -24,7 +24,7 @@ nav {
   color: var(--third-color);
   height: 6em;
   text-align: center;
-  padding: 1.5rem;
+  padding: 0 1.5rem;
   will-change: filter;
   transition: filter 300ms;
 }
