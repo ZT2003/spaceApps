@@ -160,3 +160,12 @@ li a {
 .info_list li b {
   color: var(--second-color);
 }
+/*================================= team page =================================*/
+.team-cards-div {
+  display: flex;
+  justify-content: center;
+  color: var(--second-color);
+}
+.team-card img {
+  width: 40%;
+}
