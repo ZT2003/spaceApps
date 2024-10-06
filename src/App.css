@@ -148,6 +148,18 @@ nav {
   display: flex;
   justify-content: center;
   color: var(--second-color);
+  text-align: center;
+}
+
+.team-cards-div h3,
+p {
+  color: var(--third-color);
+}
+.team-card {
+  background-color: var(--fourth-color);
+  margin: 10px;
+  border: var(--second-color) 2px solid;
+  border-radius: 20px;
 }
 .team-card img {
   width: 40%;
